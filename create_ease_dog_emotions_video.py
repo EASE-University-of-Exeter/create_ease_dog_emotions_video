@@ -264,10 +264,6 @@ df[['angry_disgusted']] = angry_disgusted_default_y + (scaler.fit_transform(df[[
 #mouth_corner_right is significantly decreased in its Y coordinate, relative to mouth_corner_left
 
 
-inner_brow_left, nose_corner_left and mouth_corner_left are all significantly decreased in their Y coordinates(relative to their corresponding landmarks: pinna_ear_right, inner_brow_right, nose_corner_right and mouth_corner_right).
-
-
-
 calc_ears_tilted = lambda row: True if row.pinna_ear_left_y  < (row.pinna_ear_right_y - threshold) or row.pinna_ear_right_y  < (row.pinna_ear_left_y  - threshold) else False
 data_ears_tilted = df.apply(calc_ears_tilted, axis=1) # get column data with an index
 df = df.assign(ears_tilted=data_ears_tilted.values) # assign values to column

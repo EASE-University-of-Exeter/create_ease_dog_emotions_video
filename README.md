@@ -36,20 +36,20 @@ Might require retraining (with as few as 10 frames), when encountering novel dog
 
 Useage:
 
-ipython create_growing_line_plot_video.py C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\create_ease_dog_emotions_video\data.csv
+ipython create_growing_line_plot_video.py C:\Users\steve\Documents\GitHub\create_ease_dog_emotions_video\data.csv
 
 Ipython create_ease_dog_emotions_video.py data.csv
 
-Ipython C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\create_ease_dog_emotions_video\create_ease_dog_emotions_video.py C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\create_ease_dog_emotions_video\data.csv
+Ipython C:\Users\steve\Documents\GitHub\create_ease_dog_emotions_video\create_ease_dog_emotions_video.py C:\Users\steve\Documents\GitHub\create_ease_dog_emotions_video\data.csv
 
-ipython C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\create_ease_dog_emotions_video\create_ease_dog_emotions_video.py "C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\Tales Vids\12-094136-services\12-094136-services_Segment_0_x264DeepCut_resnet50_ease_dog_emotions_1Mar13shuffle1_34000.csv"
+ipython C:\Users\steve\Documents\GitHub\create_ease_dog_emotions_video\create_ease_dog_emotions_video.py "C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\Tales Vids\12-094136-services\12-094136-services_Segment_0_x264DeepCut_resnet50_ease_dog_emotions_1Mar13shuffle1_34000.csv"
 
 Note: paths with spaces require speechmarks
 
-ipython C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\create_ease_dog_emotions_video\create_ease_dog_emotions_video.py  "C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\DogFAC vids\5\Clip 5DeepCut_resnet50_ease_dog_emotions_1Mar13shuffle1_38000.csv"
+ipython C:\Users\steve\Documents\GitHub\create_ease_dog_emotions_video\create_ease_dog_emotions_video.py  "C:\Users\steve\Anaconda3\envs\ease_dog_emotions\dev\DogFAC vids\5\Clip 5DeepCut_resnet50_ease_dog_emotions_1Mar13shuffle1_38000.csv"
 
 Issue:
 The output MP4 video for the line charts is at 25 FPS. If the original video file used as an input for DeepLabCut is not at 25 fps, then there will be a mismatch of durations.
-The CSV file only list the total number of frames (the same as the rows in the CSV file), but does not include the original rate. Workaround is to change the framerate of the output video to 25 fps.
+The CSV file only list the total number of frames (the same as the rows in the CSV file), but does not include the original rate. Workaround is to change the framerate of the output video to 25 fps, using keyframes to manually adjust how many of the available frames are used within a fixed duration (the length of the original video file).
 
 
