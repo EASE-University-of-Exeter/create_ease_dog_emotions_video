@@ -350,7 +350,7 @@ with writer.saving(figure, csvFileDirName + ".\\" + csvFileNameWithoutExtension 
 	for n in range(len(df.index) + 25): # Note: the +25 is only needed because I wanted to add an extra second at the end of the vid to get around an OpenShot bug!
 		#print ("Creating frame %d of %d" % (n+1, len(df.index)))   
 		#print(df.SEPARATION_mouth_corner_left_to_upper_lip[:n])
-		happy_line.set_data(df.frame[:n],df.happy[:n])
+		happy_line.set_data(df.frame[:n],df.happy[:n]) # important! Don't forget that ':n' means everything upto n - this why this works... each video frame includes the new data point and all points up to the current point - if you put 'n', then each video frame would only include the current datapoint
 		scared_sad_line.set_data(df.frame[:n],df.scared_sad[:n])
 		angry_disgusted_line.set_data(df.frame[:n],df.angry_disgusted[:n])
 		suprised_line.set_data(df.frame[:n],df.suprised[:n])
